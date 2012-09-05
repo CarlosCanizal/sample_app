@@ -21,4 +21,8 @@ module SessionsHelper
     self.current_user = nil
     cookies.delete(:remember_token)
   end
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8375dcb2c97f4f388e223d800b2224f25a8e5094
 end
