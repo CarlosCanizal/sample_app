@@ -129,4 +129,9 @@ describe User do
     its(:remember_token) { should_not be_blank }
   end
 
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
+
 end

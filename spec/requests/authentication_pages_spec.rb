@@ -37,10 +37,6 @@ describe "Authentication" do
       it { should have_link('Profile', href: user_path(user)) }
       it { should have_link('Sign out', href: signout_path) }
       it { should_not have_link('Sign in', href: signin_path) }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8375dcb2c97f4f388e223d800b2224f25a8e5094
       describe "followed by signout" do
         before { click_link "Sign out" }
         it { should have_link('Sign in') }

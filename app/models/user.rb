@@ -15,11 +15,8 @@ class User < ActiveRecord::Base
 
   before_save { |user| user.email = email.downcase }
 
-<<<<<<< HEAD
   #before_save { self.email.downcase! }
-=======
-  before_save { self.email.downcase! }
->>>>>>> 8375dcb2c97f4f388e223d800b2224f25a8e5094
+
   before_save :create_remember_token
 
   validates :name, presence: true, length: { maximum: 50 }
@@ -36,8 +33,4 @@ class User < ActiveRecord::Base
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end
-<<<<<<< HEAD
-=======
-
->>>>>>> 8375dcb2c97f4f388e223d800b2224f25a8e5094
 end
